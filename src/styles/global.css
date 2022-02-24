@@ -1,12 +1,12 @@
 @tailwind base;
 
-a {
+/* a {
   @apply text-blue-700;
 }
 
 a:hover {
   @apply border-b-2 border-blue-700;
-}
+} */
 
 @tailwind components;
 
@@ -18,4 +18,16 @@ a:hover {
 
 .content ul {
   @apply my-6;
+}
+/*https://stackoverflow.com/questions/66416614/how-to-create-scrollable-element-in-tailwind-without-a-scrollbar*/
+@layer utilities {
+    /* Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
 }
